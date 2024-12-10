@@ -1,0 +1,83 @@
+.add-menu input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+}
+.add-menu form {
+  margin: 5rem 0;
+  color: white;
+}
+.add-menu__image {
+  width: 33rem;
+  height: 20rem;
+  margin: 1rem auto;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.add-menu__image input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.add-menu__image p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-menu__process h3 {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+.add-menu__process p {
+  font-size: 1.2rem;
+}
+.add-menu__items {
+  display: flex;
+  gap: 1rem;
+}
+.add-menu__inputs {
+  flex-grow: 1;
+}
+.add-menu__items button {
+  width: 5rem;
+  height: 2rem;
+}
+.saveButton__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.saveButton {
+  margin-top: 5rem;
+  border-radius: 1rem;
+  width: 30%;
+  height: 5rem;
+  font-size: 1.6rem;
+}
+.instructions__container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.instructions__container button {
+  width: 5rem;
+  height: 2rem;
+}
+.add-menu__ingredient{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem   ;
+  margin-top: 1rem;
+}

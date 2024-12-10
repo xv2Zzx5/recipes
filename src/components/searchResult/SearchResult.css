@@ -1,0 +1,41 @@
+.search-result{
+    display:flex;
+    gap: 5rem;
+    flex-direction: row;
+    margin-bottom:2rem;
+}
+.search-result__left img{
+    width:33rem; 
+    height: 20rem;
+    object-fit: fill;
+    border-radius:1.5rem;
+    border: 1px solid white
+}
+.search-result__right{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.search-result__right h3{
+    font-size:2.2rem;
+    color:white;
+}
+.search-result__right p{
+    font-size:1.8rem;
+    color:white;
+    flex-grow: 1;
+}
+.search-result__actions{
+    display:flex; 
+    gap: 1.5rem;
+    
+}
+.search-result__actions button{
+    background: transparent;
+    font-size:1.1rem;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}

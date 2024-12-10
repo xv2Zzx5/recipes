@@ -1,0 +1,19 @@
+.search__header{
+    padding: 5rem 0; 
+}
+.header__container input{
+    width: 30rem;
+    height:4rem;
+    padding: 1.2rem 0;
+    padding-left: 2.1rem;
+    margin-right: 1.7rem;
+    border-radius: 0.8rem;
+    margin-top:5.6rem;
+    font-size: 1.3rem;
+}   
+.header__container button{
+    width: 8rem;  
+    height:4rem;     
+    border-radius: 0.8rem;   
+    font-size: 1.3rem;
+}

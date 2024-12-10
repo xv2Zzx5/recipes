@@ -1,0 +1,7 @@
+.section-title{
+    border-left: 2px solid var(--primary-color);
+    padding: 0 1.6rem;
+    font-weight: 400;  
+    color: #FFFFFF;    
+    font-size: 2.6rem;      
+}

@@ -1,0 +1,19 @@
+.form__container {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 2fr;
+}
+input {
+  border: none;
+  outline: none;
+
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+}
+button:hover{
+    opacity: 0.5;
+}

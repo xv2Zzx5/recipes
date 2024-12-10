@@ -1,0 +1,56 @@
+nav {
+  background-color: var(--primary-color);
+  box-shadow: 0px 4px 1rem rgba(0, 0, 0, 0.103)
+}
+.menu {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__left, .menu__right {
+    display:flex;
+    gap:4rem;
+}
+.menu a{
+    padding:1rem;
+    display:block;
+    font-size: 1.5rem;
+    color:black;
+}
+.menu a.active{
+    background-color: white;
+    border-radius: 1rem;
+    color: var(--primary-color)
+}
+.menu__avatar{
+  width:4rem;
+  height:4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border:1px solid black;
+}
+.menu__user{
+  display: flex;
+  gap:1rem;
+  align-items: center;
+}
+.menu p{
+  font-size:1.5rem;
+  font-weight: 700;
+}
+.menu button{
+  font-size: 1.5rem;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.menu__user a{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+  padding: 0.5rem;
+}

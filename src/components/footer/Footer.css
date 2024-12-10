@@ -1,0 +1,13 @@
+.logo{
+    width:  10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+footer{
+    padding: 3rem;      
+    text-align: center;
+    margin-top: 5rem;
+}
+footer nav{
+    box-shadow: none;
+}

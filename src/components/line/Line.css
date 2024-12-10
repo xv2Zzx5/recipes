@@ -1,0 +1,28 @@
+.line{
+    margin: 2rem 0;
+    position: relative;
+}
+.line hr{
+    border:none;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+.line__left, .line__right{
+    position: absolute;
+    height:0;
+    width:0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;                
+    border-bottom: 1rem solid var(--primary-color); 
+    top: 47%;
+    transform: translateY(-50%);
+}
+.line__left{
+    transform: translateY(-50%) rotate(90deg);
+
+}
+.line__right{
+    right:0;
+    transform: translateY(-50%) rotate(-90deg);
+
+}
