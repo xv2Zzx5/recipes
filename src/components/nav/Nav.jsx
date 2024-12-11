@@ -16,7 +16,7 @@ function Nav(props) {
         <div className="menu">
           <div className="menu__left">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/addMenu">Add menu</NavLink>
+            {clerk.user?  <NavLink to="/addMenu">Add menu</NavLink>: null}
             <NavLink to="/search">Search</NavLink>
           </div>
           <div className="menu__right">

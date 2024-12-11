@@ -4,11 +4,13 @@ import Line from "../components/line/Line";
 import "./AddMenuPage.css";
 import { RiImageAddFill } from "react-icons/ri";
 import { useData } from "../context/DataContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useClerk } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 function AddMenuPage(props) {
   const data = useData()
   const clerk = useClerk()
+  const navigate = useNavigate()
   const [recipeName, setRecipeName] = useState("")
   const [ingredient, setIngredient] = useState("")
   const [instruction, setInstruction] = useState("")
@@ -30,6 +32,13 @@ function AddMenuPage(props) {
     reader.readAsDataURL(file)
     }
   }
+  useEffect (() => {
+    if(!clerk.user){
+      navigate("/")
+      
+    }
+    
+  }, [clerk.user])
   function onSubmit(e){
     e.preventDefault()
     data.createRecipe({

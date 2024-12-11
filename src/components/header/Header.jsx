@@ -2,8 +2,17 @@ import React from "react";
 import "./Header.css";
 import thumbnail from "./thumbnail.jpg";
 import { GoArrowRight } from "react-icons/go";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const [search, setSearch] = useState("")
+  const navigate = useNavigate()
+  function handleSearch(){
+    const encoded = encodeURIComponent(search)
+    navigate("/search/" + encoded)
+    console.log(encoded)
+  }
   return (
     <header className="header">
       <div className="container header__content">
@@ -13,8 +22,8 @@ function Header() {
           </h1>
           <div className = "header__input">
          
-            <input placeholder="Search Your Favourite Food" />
-            <button>
+            <input placeholder="Search Your Favourite Food" value = {search} onChange = {(e) => setSearch(e.target.value)} />
+            <button onClick = {handleSearch}>
               <GoArrowRight />
             </button>
           </div>

@@ -15,7 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/addMenu" element={<AddMenuPage />} />
-            <Route path="/search" element={<SearchPage />} />
+            <Route path="/search/:searchValue?" element={<SearchPage />} />
             <Route path = "/profile/:userId" element = {<ProfilePage/>}/>
           </Routes>
         </div>

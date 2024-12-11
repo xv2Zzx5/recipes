@@ -3,25 +3,32 @@ import Line from "../components/line/Line";
 import "./SearchPage.css";
 import SectionTitle from "../components/sectionTitle/SectionTitle";
 import SearchResult from "../components/searchResult/SearchResult";
-import Milk from "../assets/milk.jpg";
 import { useData } from "../context/DataContext"; 
 import { useClerk } from "@clerk/clerk-react";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 function SearchPage() {
+  const params = useParams()
   const { recipes, likeRecipe, bookmarkRecipe } = useData();
   const clerk = useClerk()
-
+  const [search, setSearch] = useState(params.searchValue||"")
+  const [searchResults, setSearchResults] = useState([])
+  function handleSearch(){
+    const results = recipes.filter((recipe) => recipe.name.includes(search))
+    setSearchResults(results)
+  }
   return (
     <div>
       <header className="container search__header">
         <SectionTitle title="Explore recipies" />
         <div className="header__container">
-          <input type="text" placeholder="recipe name, ingredient, meal type" />
-          <button>search</button> 
+          <input type="text" placeholder="recipe name, ingredient, meal type" value = {search} onChange = {(e) => setSearch(e.target.value)} />
+          <button onClick = {handleSearch}>search</button> 
         </div>
       </header>
       <div className="container">
         <Line />
-        {recipes.map((recipe,) => (
+        {searchResults.map((recipe,) => (
           <SearchResult
             description={recipe.instructions.join(", ")} 
             key = {recipe.id}
