@@ -3,7 +3,7 @@ nav {
   box-shadow: 0px 4px 1rem rgba(0, 0, 0, 0.103)
 }
 .menu {
-  height: 6rem;
+  min-height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,4 +53,10 @@ nav {
   align-items: center;
   gap:1rem;
   padding: 0.5rem;
+}
+@media(max-width:768px){
+  .menu{
+    flex-wrap: wrap;
+
+  }
 }

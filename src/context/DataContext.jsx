@@ -42,16 +42,19 @@ export const DataContextProvider = (props) =>{
     async function bookmarkRecipe(recipeId,userId){
         
         const snapshot = doc(firestore, "recipes", recipeId)
-        const recipe = recipes.find((recipe) => recipe.id === recipeId)
+        const index  = recipes.findIndex((recipe) => recipe.id === recipeId)
+        const recipe = recipes[index]
+        let bookmarks; 
         if(recipe.bookmarks.includes(userId)){
-            recipe.bookmarks =   recipe.bookmarks.filter((bookmark) => bookmark != userId)
+           bookmarks =   recipe.bookmarks.filter((bookmark) => bookmark != userId)
         }
         else{
-            recipe.bookmarks = [...recipe.bookmarks, userId]
+            bookmarks = [...recipe.bookmarks, userId]
         }
-        const index  = recipes.findIndex((recipe) => recipe.id === recipeId)
-        setRecipes([...recipes.slice(0, index),{ ...recipe}, ...recipes.slice(index + 1)])
-        await updateDoc(snapshot, {bookmarks: recipe.bookmarks})
+
+        setRecipes([...recipes.slice(0, index),{ ...recipe, bookmarks}, ...recipes.slice(index + 1)])
+        await updateDoc(snapshot, {bookmarks})
+
     }
     async function deleteRecipe(recipeId){
         const snapshot = doc(firestore, "recipes", recipeId)

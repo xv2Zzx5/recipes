@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Line from "../components/line/Line";
 import "./SearchPage.css";
 import SectionTitle from "../components/sectionTitle/SectionTitle";
@@ -12,9 +12,14 @@ function SearchPage() {
   const { recipes, likeRecipe, bookmarkRecipe } = useData();
   const clerk = useClerk()
   const [search, setSearch] = useState(params.searchValue||"")
-  const [searchResults, setSearchResults] = useState([])
+  const [searchResults, setSearchResults] = useState(recipes)
+  useEffect(() => {
+      if(search.trim().length > 0){
+        handleSearch()
+      }
+  },[])
   function handleSearch(){
-    const results = recipes.filter((recipe) => recipe.name.includes(search))
+    const results = recipes.filter((recipe) => recipe.name.toLowerCase().includes(search.toLowerCase()))
     setSearchResults(results)
   }
   return (

@@ -7,7 +7,7 @@ function Categories(props) {
       <SectionTitle title={props.title} />
       <ul className="categories__list">
         {props.categories.map((category) => (
-          <li className = "category">
+          <li key = {category.name} className = "category">
             <img src={category.image} alt={category.name} />
             <p>{category.name}</p>
           </li>

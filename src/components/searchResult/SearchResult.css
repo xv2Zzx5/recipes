@@ -5,7 +5,7 @@
     margin-bottom:2rem;
 }
 .search-result__left img{
-    width:33rem; 
+    width:30rem; 
     height: 20rem;
     object-fit: fill;
     border-radius:1.5rem;
@@ -38,4 +38,9 @@
     align-items: center;
     justify-content: center;
     gap: 0.7rem;
+}
+@media(max-width:620px){
+    .search-result{
+        flex-direction: column;
+    }
 }

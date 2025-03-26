@@ -33,7 +33,7 @@ function Nav(props) {
                       <CiUser />
                     )}
                   </div>
-                  <p>{clerk.user?.username}</p>
+                  <p>{clerk.user?.username.slice(0,10) + (clerk.user?.username.length > 10?  "...": "")}</p>
                 </NavLink>
 
                 <div className="menu__info">

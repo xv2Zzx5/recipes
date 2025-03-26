@@ -45,7 +45,7 @@ function SearchResult(props) {
   );
 }
 SearchResult.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   ingredients: PropTypes.string.isRequired,

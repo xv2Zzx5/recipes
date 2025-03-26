@@ -3,6 +3,8 @@
     flex-direction: row;  
     justify-content: space-between;
     margin-top: 5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 .categories{
     margin-top: 7rem;
